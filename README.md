@@ -37,7 +37,6 @@
    - **用户名**: `minio`（或您在 `.env` 中设置的 `MINIO_ROOT_USER`）
    - **密码**: `minio_pwd`（或您在 `.env` 中设置的 `MINIO_ROOT_PASSWORD`）
 3. 创建存储桶：
-![alt text](image/Create_Bucket.png)
    - 点击 "Buckets" → "Create Bucket"
    - 创建存储桶名称：`lobe`（或您在 `.env` 中设置的 `MINIO_LOBE_BUCKET`）
 4. 获取访问密钥：
@@ -91,6 +90,7 @@
 允许用户在 Casdoor 中更换头像
 
 你需要首先在 buckets 中创建一个名为 casdoor 的桶，选择自定义策略，复制并粘贴如下内容（如果你修改了桶名，请自行查找替换）
+```yml
 {
   "Statement": [
     {
@@ -125,3 +125,4 @@
   ],
   "Version": "2012-10-17"
 }
+```
